@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $appTitleEn ?? 'Village Agro Farm' }} - Income & Expense Ledger</title>
+    <title>{{ ($lang ?? 'en') === 'bn' ? ($appTitleBn ?? 'ভিলেজ এগ্রো ফার্ম') : ($appTitleEn ?? 'Village Agro Farm') }} - {{ __('ui.subtitle') }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&family=Noto+Sans+Bengali:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -38,7 +38,7 @@
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                 </div>
                 <div>
-                    <h1 class="text-xl font-black text-gray-900 dark:text-white">{{ $appTitleEn ?? 'Village Agro Farm' }}</h1>
+                    <h1 class="text-xl font-black text-gray-900 dark:text-white">{{ ($lang ?? 'en') === 'bn' ? ($appTitleBn ?? 'ভিলেজ এগ্রো ফার্ম') : ($appTitleEn ?? 'Village Agro Farm') }}</h1>
                     <p class="text-[11px] font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase">{{ __("ui.subtitle") }}</p>
                 </div>
             </div>
@@ -185,7 +185,7 @@
 
     {{-- Footer --}}
     <footer class="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800 px-6 py-5 text-center mt-auto">
-        <p class="text-xs text-gray-500 dark:text-gray-400">© 2026 Village Agro Farm secure bilingual system. Built using Node, TypeScript/React & Google relational structure engines. Handled securely with active session encryption.</p>
+        <p class="text-xs text-gray-500 dark:text-gray-400">© 2026 {{ ($lang ?? 'en') === 'bn' ? ($appTitleBn ?? 'ভিলেজ এগ্রো ফার্ম') : ($appTitleEn ?? 'Village Agro Farm') }} secure bilingual system. Built using Node, TypeScript/React & Google relational structure engines. Handled securely with active session encryption.</p>
     </footer>
 
     <script>
