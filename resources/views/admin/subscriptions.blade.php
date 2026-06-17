@@ -223,8 +223,8 @@
                     </div>
                 </div>
                 <div class="flex justify-end gap-3 pt-2">
-                    <button type="button" @click="showPlanModal=false" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
-                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm" x-text="editingPlan ? 'Save Changes' : 'Create Plan'"></button>
+                    <button type="button" @click="showPlanModal=false" class="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
+                    <button type="submit" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all cursor-pointer shadow-sm" x-text="editingPlan ? 'Save Changes' : 'Create Plan'"></button>
                 </div>
             </form>
         </div>
@@ -275,8 +275,8 @@
                     </select>
                 </div>
                 <div class="flex justify-end gap-3 pt-2">
-                    <button type="button" @click="showGatewayModal=false" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
-                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm" x-text="editingGateway ? 'Save Changes' : 'Add Gateway'"></button>
+                    <button type="button" @click="showGatewayModal=false" class="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
+                    <button type="submit" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all cursor-pointer shadow-sm" x-text="editingGateway ? 'Save Changes' : 'Add Gateway'"></button>
                 </div>
             </form>
         </div>
@@ -326,8 +326,8 @@
                     <input type="text" name="trx_ref" x-model="userForm.trx_ref" placeholder="e.g. BK1245TX" class="w-full rounded-xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-950 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none">
                 </div>
                 <div class="flex justify-end gap-3 pt-2">
-                    <button type="button" @click="showUserModal=false" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
-                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">Save</button>
+                    <button type="button" @click="showUserModal=false" class="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
+                    <button type="submit" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all cursor-pointer shadow-sm">Save</button>
                 </div>
             </form>
         </div>

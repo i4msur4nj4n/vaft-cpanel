@@ -31,8 +31,8 @@
             <input type="text" id="invoiceSearch" placeholder="Filter invoices by code or client name..." class="block w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none">
         </div>
         <div class="flex items-center gap-3">
-            <a href="/accounting/export-invoices-csv" class="px-4 py-2.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all no-underline">{{ __("ui.export_csv_file") }}</a>
-            <button onclick="document.getElementById('invoiceModal').classList.remove('hidden')" class="px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-all">+ Generate Invoice</button>
+            <a href="/accounting/export-invoices-csv" class="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all no-underline">{{ __("ui.export_csv_file") }}</a>
+            <button onclick="document.getElementById('invoiceModal').classList.remove('hidden')" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">+ Generate Invoice</button>
         </div>
     </div>
     <div class="bg-white dark:bg-slate-900 rounded-2xl border border-gray-100 dark:border-slate-800 shadow-sm overflow-hidden">
@@ -88,7 +88,7 @@
                 </div>
                 <div class="flex justify-center gap-3 pt-2">
                     <button type="button" onclick="document.getElementById('invoiceModal').classList.add('hidden')" class="px-6 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 transition-all">Cancel</button>
-                    <button type="submit" class="px-6 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm transition-all">Confirm \& Post Invoice</button>
+                    <button type="submit" class="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">Confirm \& Post Invoice</button>
                 </div>
             </form>
         </div>
@@ -226,11 +226,11 @@
             <input type="text" id="apSearch" placeholder="Filter bills by code or vendor credit name..." class="block w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none">
         </div>
         <div class="flex items-center gap-3">
-            <a href="/accounting/export-vendor-bills-csv" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all no-underline">
+            <a href="/accounting/export-vendor-bills-csv" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all no-underline">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                 Export CSV
             </a>
-            <button onclick="openApModal('create')" class="px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-all">+ Create Vendor Bill</button>
+            <button onclick="openApModal('create')" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">+ Create Vendor Bill</button>
         </div>
     </div>
 
@@ -292,7 +292,7 @@
                 <div><label class="block text-[10px] font-extrabold text-gray-500 uppercase tracking-wider mb-1.5">Short Notes</label><textarea name="notes" id="apNotes" rows="2" class="block w-full py-2.5 px-3 rounded-lg border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-sm focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none resize-y"></textarea></div>
                 <div class="flex justify-center gap-3 pt-2">
                     <button type="button" onclick="closeApModal()" class="px-6 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 transition-all">Cancel</button>
-                    <button type="submit" id="apSubmitBtn" class="px-6 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm transition-all">Register vendor Liability</button>
+                    <button type="submit" id="apSubmitBtn" class="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">Register vendor Liability</button>
                 </div>
             </form>
         </div>
@@ -357,11 +357,11 @@
                 <input type="text" id="glSearch" placeholder="Filter G/L journal rows by Account, Code or Memo Description..." class="block w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none">
             </div>
             <div class="flex items-center gap-3">
-                <a href="/accounting/export-csv" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-all no-underline">
+                <a href="/accounting/export-csv" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all no-underline">
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                     Export CSV
                 </a>
-                <button onclick="document.getElementById('glModal').classList.remove('hidden')" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-bold text-xs hover:bg-gray-800 transition-all">{{ __("ui.post_journal") }}</button>
+                <button onclick="document.getElementById('glModal').classList.remove('hidden')" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-bold text-xs hover:bg-gray-800 transition-all">{{ __("ui.post_journal") }}</button>
             </div>
         </div>
 
@@ -433,7 +433,7 @@
                 </div>
                 <div class="flex justify-end gap-3 pt-2">
                     <button type="button" onclick="document.getElementById('glModal').classList.add('hidden')" class="px-5 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 transition-all">Cancel</button>
-                    <button type="submit" class="px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm transition-all">Post balanced entry</button>
+                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">Post balanced entry</button>
                 </div>
             </form>
         </div>
@@ -506,7 +506,7 @@
             </div>
             <div class="flex items-center gap-3">
                 <a href="/accounting/export-bank-csv" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-slate-700 text-[11px] font-bold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all no-underline"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Export CSV</a>
-                <button onclick="openBankModal('add',0,'','','','deposit')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-bold text-[11px] hover:bg-gray-800 transition-all">{{ __("ui.add_bank_row") }}</button>
+                <button onclick="openBankModal('add',0,'','','','deposit')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-bold text-xs hover:bg-gray-800 transition-all">{{ __("ui.add_bank_row") }}</button>
             </div>
         </div>
 
@@ -613,7 +613,7 @@
                 </div>
                 <div class="flex justify-end gap-3 pt-2">
                     <button type="button" onclick="closeBankModal()" class="px-5 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 transition-all">Cancel</button>
-                    <button type="submit" id="bankSubmitBtn" class="px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm transition-all">Inject bank record</button>
+                    <button type="submit" id="bankSubmitBtn" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">Inject bank record</button>
                 </div>
             </form>
         </div>
@@ -715,7 +715,7 @@
                 <h3 class="font-extrabold text-sm text-gray-900 dark:text-white tracking-tight">COMPLIANCE AUDITOR REPORTS MODULE</h3>
                 <p class="text-xs text-gray-500 mt-0.5">Comprehensive Trial Balance statements ledger audits generated in real time.</p>
             </div>
-            <a href="/accounting/export-compliance-json" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all shadow-sm">
+            <a href="/accounting/export-compliance-json" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all shadow-sm">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                 Export Full compliance trace (JSON)
             </a>
@@ -744,11 +744,11 @@
                     <label class="block text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">To Date</label>
                     <input type="date" value="2026-12-31" class="py-2.5 px-3 rounded-lg border border-gray-200 dark:border-slate-800 bg-gray-50/55 dark:bg-slate-950 text-xs focus:border-emerald-500 focus:outline-none">
                 </div>
-                <a href="/accounting/export-csv" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all">
+                <a href="/accounting/export-csv" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all">
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                     Export CSV
                 </a>
-                <a href="/accounting/export-pdf" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all">
+                <a href="/accounting/export-pdf" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all">
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/></svg>
                     PDF / Print View
                 </a>
@@ -839,7 +839,7 @@
                 <div><label class="block text-[10px] font-extrabold text-gray-500 uppercase tracking-wider mb-1.5">NORMAL BALANCE TYPE</label><select name="normal_balance" id="chartBalance" required class="block w-full py-2.5 px-3 rounded-lg border border-gray-200 dark:border-slate-800 bg-gray-50/55 dark:bg-slate-950 text-xs focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none"><option value="debit">Debit (Dr)</option><option value="credit">Credit (Cr)</option></select></div>
                 <div><label class="block text-[10px] font-extrabold text-gray-500 uppercase tracking-wider mb-1.5">DESCRIPTION (OPTIONAL)</label><input type="text" name="description" id="chartDesc" placeholder="Brief purpose of this sector ledger..." class="block w-full py-2.5 px-3 rounded-lg border border-gray-200 dark:border-slate-800 bg-gray-50/55 dark:bg-slate-950 text-xs focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none"></div>
                 <div class="flex gap-2">
-                    <button type="submit" id="chartSubmitBtn" class="flex-1 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-all">✓ Register Account</button>
+                    <button type="submit" id="chartSubmitBtn" class="flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all">✓ Register Account</button>
                     <button type="button" id="chartCancelBtn" onclick="resetChartForm()" class="hidden px-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 hover:bg-gray-50 transition-all">Cancel</button>
                 </div>
             </form>

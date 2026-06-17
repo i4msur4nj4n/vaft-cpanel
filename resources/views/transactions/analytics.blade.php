@@ -53,8 +53,8 @@
                 </div>
             </div>
             <div class="lg:col-span-6 flex items-center gap-3 pt-2">
-                <button type="submit" class="rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] px-4 py-2 transition">{{ __("ui.apply_filters") }}</button>
-                <a href="/transactions/analytics" class="rounded-lg border border-gray-200 dark:border-slate-700 text-[11px] font-bold text-gray-600 dark:text-gray-400 px-4 py-2 hover:bg-gray-50 transition">{{ __("ui.clear_all") }}</a>
+                <button type="submit" class="rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 transition">{{ __("ui.apply_filters") }}</button>
+                <a href="/transactions/analytics" class="rounded-xl border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 dark:text-gray-400 px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-800 transition">{{ __("ui.clear_all") }}</a>
             </div>
         </form>
     </div>
@@ -62,7 +62,7 @@
     {{-- Matches & Export --}}
     <div class="flex items-center justify-between">
         <p class="text-xs text-gray-500">Matches Found: <span class="font-bold text-gray-900 dark:text-white">{{ count($transactions) }} Transactions</span></p>
-        <a href="/transactions/analytics/export-csv?{{ http_build_query(request()->query()) }}" class="rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-bold text-[11px] px-4 py-2 transition italic no-underline">Export to CSV File</a>
+        <a href="/transactions/analytics/export-csv?{{ http_build_query(request()->query()) }}" class="rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-[11px] px-4 py-2 transition italic no-underline">Export to CSV File</a>
     </div>
 
     {{-- KPI Cards --}}

@@ -113,8 +113,8 @@
                     <p class="text-[10px] text-gray-400 mt-1">Optional. Enter a new password if you want to reset this user's password.</p>
                 </div>
                 <div class="flex justify-end gap-3 pt-2">
-                    <button type="button" @click="showEditUserModal=false" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
-                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.save_transaction") }}</button>
+                    <button type="button" @click="showEditUserModal=false" class="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
+                    <button type="submit" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.save_transaction") }}</button>
                 </div>
             </form>
         </div>
@@ -192,8 +192,8 @@
 
             {{-- Footer --}}
             <div class="px-6 py-4 border-t border-gray-100 dark:border-slate-800 flex justify-end gap-3 shrink-0">
-                <button @click="showPermModal=false" type="button" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
-                <button type="submit" form="permForm" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.apply_permissions") }}</button>
+                <button @click="showPermModal=false" type="button" class="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
+                <button type="submit" form="permForm" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.apply_permissions") }}</button>
             </div>
         </div>
     </div>

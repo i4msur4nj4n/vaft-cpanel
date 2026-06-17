@@ -214,8 +214,8 @@
             <h3 class="text-lg font-black text-gray-900 dark:text-white">{{ __("ui.logout") }}?</h3>
             <p class="text-sm text-gray-500">{{ __("ui.confirm_logout") }}</p>
             <div class="flex gap-3 justify-center pt-2">
-                <button onclick="document.getElementById('logout-modal').classList.add('hidden')" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
-                <button onclick="document.getElementById('logout-form').submit()" class="px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.logout") }}</button>
+                <button onclick="document.getElementById('logout-modal').classList.add('hidden')" class="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
+                <button onclick="document.getElementById('logout-form').submit()" class="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.logout") }}</button>
             </div>
         </div>
     </div>

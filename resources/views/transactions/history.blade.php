@@ -41,8 +41,8 @@
                 <input type="text" name="keyword" value="{{ request('keyword') }}" placeholder="..." class="w-full rounded-lg border border-gray-200 dark:border-slate-800 bg-gray-50/55 dark:bg-slate-950 text-xs py-2 px-3" oninput="clearTimeout(this._t);this._t=setTimeout(()=>this.form.submit(),500)">
             </div>
             <div class="lg:col-span-5 flex items-center gap-3 pt-2">
-                <button type="submit" class="rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[11px] px-4 py-2 transition">{{ __('ui.filter') }}</button>
-                <a href="/transactions/history" class="rounded-lg border border-gray-200 dark:border-slate-700 text-[11px] font-bold text-gray-600 px-4 py-2 hover:bg-gray-50 transition">{{ __('ui.clear') }}</a>
+                <button type="submit" class="rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 transition">{{ __('ui.filter') }}</button>
+                <a href="/transactions/history" class="rounded-xl border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-800 transition">{{ __('ui.clear') }}</a>
             </div>
         </form>
     </div>
@@ -159,8 +159,8 @@
                 </div>
 
                 <div class="flex justify-end gap-3 pt-2">
-                    <button type="button" @click="showEditModal=false" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">Cancel</button>
-                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.save_transaction") }}</button>
+                    <button type="button" @click="showEditModal=false" class="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">Cancel</button>
+                    <button type="submit" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.save_transaction") }}</button>
                 </div>
             </form>
         </div>
@@ -176,11 +176,11 @@
                 <h3 class="text-lg font-black text-gray-900 dark:text-white">{{ __("ui.delete_txn_title") }}</h3>
                 <p class="text-sm text-gray-500">{{ __("ui.delete_txn_desc") }}</p>
                 <div class="flex gap-3 justify-center pt-2">
-                    <button @click="showDeleteModal=false" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">Cancel</button>
+                    <button @click="showDeleteModal=false" class="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-xs font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">Cancel</button>
                     <form :action="'/transactions/' + deleteId" method="POST">
                         @csrf
                         <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.delete") }}</button>
+                        <button type="submit" class="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.delete") }}</button>
                     </form>
                 </div>
             </div>
