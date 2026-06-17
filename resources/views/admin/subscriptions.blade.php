@@ -90,7 +90,7 @@
         <div class="p-5 border-b border-gray-100 dark:border-slate-800 flex items-center justify-between">
             <h2 class="text-sm font-black text-gray-900 dark:text-white uppercase tracking-wide">{{ __("ui.manage_plans") }}</h2>
             <button @click="openCreatePlan()" class="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 text-xs font-bold transition-all cursor-pointer shadow-sm">
-                + ADD NEW PLAN
+                {{ __("ui.add_new_plan") }}
             </button>
         </div>
         <div class="p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -136,7 +136,7 @@
         <div class="p-5 border-b border-gray-100 dark:border-slate-800 flex items-center justify-between">
             <h2 class="text-sm font-black text-gray-900 dark:text-white uppercase tracking-wide">{{ __("ui.manage_gateways") }}</h2>
             <button @click="openCreateGateway()" class="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 text-xs font-bold transition-all cursor-pointer shadow-sm">
-                + ADD GATEWAY
+                {{ __("ui.add_gateway") }}
             </button>
         </div>
         <div class="p-5 grid grid-cols-1 md:grid-cols-2 gap-4">

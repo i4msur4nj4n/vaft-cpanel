@@ -98,8 +98,8 @@
     <div x-show="showEditModal" x-cloak class="fixed inset-0 z-50 flex items-center justify-center p-4" style="background:rgba(0,0,0,0.5)">
         <div @click.away="showEditModal=false" class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden">
             <div class="bg-gradient-to-r from-emerald-600 to-teal-700 p-5">
-                <h3 class="text-white font-black text-base">Update Entry</h3>
-                <p class="text-white/70 text-xs mt-1">Record transaction inside the secure cryptographic ledger.</p>
+                <h3 class="text-white font-black text-base">{{ __("ui.update_entry") }}</h3>
+                <p class="text-white/70 text-xs mt-1">{{ __("ui.record_desc") }}</p>
             </div>
             <form :action="'/transactions/' + editForm.id" method="POST" class="p-6 space-y-5">
                 @csrf
@@ -160,7 +160,7 @@
 
                 <div class="flex justify-end gap-3 pt-2">
                     <button type="button" @click="showEditModal=false" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">Cancel</button>
-                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">Save Transaction</button>
+                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.save_transaction") }}</button>
                 </div>
             </form>
         </div>
@@ -173,14 +173,14 @@
                 <div class="mx-auto w-14 h-14 rounded-full bg-rose-50 dark:bg-rose-950/30 flex items-center justify-center">
                     <svg class="w-7 h-7 text-rose-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
                 </div>
-                <h3 class="text-lg font-black text-gray-900 dark:text-white">Delete Transaction?</h3>
-                <p class="text-sm text-gray-500">This action cannot be undone. The transaction will be permanently removed from the ledger.</p>
+                <h3 class="text-lg font-black text-gray-900 dark:text-white">{{ __("ui.delete_txn_title") }}</h3>
+                <p class="text-sm text-gray-500">{{ __("ui.delete_txn_desc") }}</p>
                 <div class="flex gap-3 justify-center pt-2">
                     <button @click="showDeleteModal=false" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">Cancel</button>
                     <form :action="'/transactions/' + deleteId" method="POST">
                         @csrf
                         <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">Delete</button>
+                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.delete") }}</button>
                     </form>
                 </div>
             </div>

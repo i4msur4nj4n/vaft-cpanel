@@ -361,7 +361,7 @@
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                     Export CSV
                 </a>
-                <button onclick="document.getElementById('glModal').classList.remove('hidden')" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-bold text-xs hover:bg-gray-800 transition-all">+ Post Journal Entry</button>
+                <button onclick="document.getElementById('glModal').classList.remove('hidden')" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-bold text-xs hover:bg-gray-800 transition-all">{{ __("ui.post_journal") }}</button>
             </div>
         </div>
 
@@ -506,7 +506,7 @@
             </div>
             <div class="flex items-center gap-3">
                 <a href="/accounting/export-bank-csv" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-slate-700 text-[11px] font-bold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all no-underline"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Export CSV</a>
-                <button onclick="openBankModal('add',0,'','','','deposit')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-bold text-[11px] hover:bg-gray-800 transition-all">+ Add Bank Row</button>
+                <button onclick="openBankModal('add',0,'','','','deposit')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-900 dark:bg-white dark:text-gray-900 text-white font-bold text-[11px] hover:bg-gray-800 transition-all">{{ __("ui.add_bank_row") }}</button>
             </div>
         </div>
 
