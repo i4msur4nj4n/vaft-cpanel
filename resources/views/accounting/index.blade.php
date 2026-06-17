@@ -13,12 +13,12 @@
     {{-- Tabs --}}
     @php $activeTab = request('tab', 'invoicing'); @endphp
     <div class="flex border-b border-gray-200 dark:border-slate-800 gap-0 overflow-x-auto">
-        <a href="/accounting?tab=invoicing" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'invoicing' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">Sales Invoicing (A/R)</a>
-        <a href="/accounting?tab=payable" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'payable' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">Accounts Payable (A/P)</a>
-        <a href="/accounting?tab=ledger" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'ledger' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">General Ledger (G/L)</a>
-        <a href="/accounting?tab=bank" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'bank' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">Bank Reconciliation</a>
+        <a href="/accounting?tab=invoicing" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'invoicing' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">{{ __("ui.sales_invoicing") }}</a>
+        <a href="/accounting?tab=payable" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'payable' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">{{ __("ui.accounts_payable") }}</a>
+        <a href="/accounting?tab=ledger" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'ledger' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">{{ __("ui.general_ledger") }}</a>
+        <a href="/accounting?tab=bank" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'bank' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">{{ __("ui.bank_reconciliation") }}</a>
         <a href="/accounting?tab=auditor" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'auditor' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">Auditor & Tax Reports</a>
-        <a href="/accounting?tab=chart" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'chart' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">Chart of Accounts</a>
+        <a href="/accounting?tab=chart" class="px-5 py-3 text-[11px] font-bold uppercase tracking-wider border-b-2 whitespace-nowrap transition-all {{ $activeTab === 'chart' ? 'border-emerald-600 text-emerald-700 dark:text-emerald-400' : 'border-transparent text-gray-500 hover:text-gray-700' }}">{{ __("ui.chart_of_accounts") }}</a>
     </div>
 
     @if($activeTab === 'invoicing')
@@ -31,7 +31,7 @@
             <input type="text" id="invoiceSearch" placeholder="Filter invoices by code or client name..." class="block w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 focus:outline-none">
         </div>
         <div class="flex items-center gap-3">
-            <a href="/accounting/export-invoices-csv" class="px-4 py-2.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all no-underline">Export CSV</a>
+            <a href="/accounting/export-invoices-csv" class="px-4 py-2.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs transition-all no-underline">{{ __("ui.export_csv_file") }}</a>
             <button onclick="document.getElementById('invoiceModal').classList.remove('hidden')" class="px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition-all">+ Generate Invoice</button>
         </div>
     </div>
