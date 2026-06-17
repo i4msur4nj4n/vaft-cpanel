@@ -23,6 +23,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/transactions/create', [TransactionController::class, 'create']);
     Route::post('/transactions', [TransactionController::class, 'store']);
+    Route::put('/transactions/{transaction}', [TransactionController::class, 'update']);
+    Route::delete('/transactions/{transaction}', [TransactionController::class, 'destroy']);
     Route::get('/transactions/history', [TransactionController::class, 'history']);
     Route::get('/transactions/analytics', [TransactionController::class, 'analytics']);
     Route::get('/transactions/analytics/export-csv', [TransactionController::class, 'exportAnalyticsCsv']);

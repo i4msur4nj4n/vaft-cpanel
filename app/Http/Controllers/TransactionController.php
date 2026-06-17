@@ -33,6 +33,32 @@ class TransactionController extends Controller
         return redirect('/dashboard')->with('success', 'Transaction recorded successfully!');
     }
 
+    public function update(Request $request, \App\Models\Transaction $transaction)
+    {
+        $validated = $request->validate([
+            'type' => 'required|in:income,expense',
+            'date' => 'required|date',
+            'amount' => 'required|numeric|min:0.01',
+            'category_id' => 'required|exists:categories,id',
+            'project_id' => 'nullable|exists:projects,id',
+            'notes' => 'nullable|string|max:500',
+        ]);
+
+        $transaction->update($validated);
+        $cat = \App\Models\Category::find($validated['category_id']);
+        AuditLog::record('UPDATE', 'Updated transaction #' . $transaction->id . ' (' . $validated['amount'] . ' BDT, ' . ($cat->name_en ?? '') . ')');
+        return redirect('/transactions/history')->with('success', 'Transaction updated!');
+    }
+
+    public function destroy(\App\Models\Transaction $transaction)
+    {
+        $id = $transaction->id;
+        $amount = $transaction->amount;
+        $transaction->delete();
+        AuditLog::record('DELETE', 'Deleted transaction #' . $id . ' (' . $amount . ' BDT)');
+        return redirect('/transactions/history')->with('success', 'Transaction deleted!');
+    }
+
     public function history(Request $request)
     {
         $query = Transaction::with(['category', 'user', 'project']);
