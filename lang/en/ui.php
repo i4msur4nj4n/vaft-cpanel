@@ -165,5 +165,13 @@ return [
     'remember_me' => 'Remember Me',
     'no_account' => "Don't have an account?",
     'have_account' => 'Already have an account?',
+    'nav_title' => 'General Ledger Navigation',
+    'project_investments' => 'Project Investments',
+    'category_analytics' => 'Category Analytics',
+    'transaction_history' => 'Transaction History',
+    'accounting_suite' => 'Accounting Suite',
+    'vault_state' => 'Dynamic Vault State',
+    'net_flow_balance' => 'Net Flow Balance',
+    'confirm_logout' => 'Are you sure you want to sign out of your account?',
     'bdt' => 'BDT',
 ];

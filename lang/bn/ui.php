@@ -165,5 +165,13 @@ return [
     'remember_me' => 'মনে রাখুন',
     'no_account' => 'অ্যাকাউন্ট নেই?',
     'have_account' => 'ইতিমধ্যে অ্যাকাউন্ট আছে?',
+    'nav_title' => 'সাধারণ খতিয়ান নেভিগেশন',
+    'project_investments' => 'প্রকল্প বিনিয়োগ সমূহ',
+    'category_analytics' => 'ক্যাটাগরি অ্যানালিটিক্স',
+    'transaction_history' => 'লেনদেন ইতিহাস',
+    'accounting_suite' => 'হিসাব রুট',
+    'vault_state' => 'ডায়নামিক ভল্ট স্টেট',
+    'net_flow_balance' => 'নিট ফ্লো ব্যালেন্স',
+    'confirm_logout' => 'আপনি কি আপনার অ্যাকাউন্ট থেকে সাইন আউট করতে চান?',
     'bdt' => 'টাকা',
 ];

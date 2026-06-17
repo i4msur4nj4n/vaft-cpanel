@@ -90,29 +90,29 @@
         @auth
         <div class="lg:hidden w-full sticky top-[72px] z-30 bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800/80 p-2.5 rounded-2xl shadow-sm flex items-center overflow-x-auto no-scrollbar gap-1.5">
             <a href="/dashboard" class="flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap {{ request()->is('dashboard') ? 'bg-emerald-600 text-white shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100/60 dark:hover:bg-slate-800' }}">
-                📊 Dashboard
+                📊 {{ __("ui.dashboard") }}
             </a>
             <a href="/transactions/create" class="flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap {{ request()->is('transactions/create') ? 'bg-emerald-600 text-white shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100/60 dark:hover:bg-slate-800' }}">
-                📝 Add Transaction
+                📝 {{ __("ui.add_transaction") }}
             </a>
             <a href="/projects" class="flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap {{ request()->is('projects') ? 'bg-emerald-600 text-white shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100/60 dark:hover:bg-slate-800' }}">
-                💹 Project Investments
+                💹 {{ __("ui.project_investments") }}
             </a>
             <a href="/transactions/analytics" class="flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap {{ request()->is('transactions/analytics') ? 'bg-emerald-600 text-white shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100/60 dark:hover:bg-slate-800' }}">
-                📈 Category Analytics
+                📈 {{ __("ui.category_analytics") }}
             </a>
             <a href="/transactions/history" class="flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap {{ request()->is('transactions/history') ? 'bg-emerald-600 text-white shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100/60 dark:hover:bg-slate-800' }}">
-                📋 Transaction History
+                📋 {{ __("ui.transaction_history") }}
             </a>
             <a href="/accounting" class="flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap {{ request()->is('accounting') ? 'bg-emerald-600 text-white shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100/60 dark:hover:bg-slate-800' }}">
-                🧾 Accounting Suite
+                🧾 {{ __("ui.accounting_suite") }}
             </a>
             <a href="/control-panel" class="flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap {{ request()->is('control-panel') ? 'bg-emerald-600 text-white shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100/60 dark:hover:bg-slate-800' }}">
-                ⚙️ Control Panel
+                ⚙️ {{ __("ui.control_panel") }}
             </a>
             @if(Auth::user()->isAdmin())
             <a href="/admin-panel" class="flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer whitespace-nowrap {{ request()->is('admin-panel') ? 'bg-emerald-600 text-white shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100/60 dark:hover:bg-slate-800' }}">
-                🛡️ Admin Panel
+                🛡️ {{ __("ui.admin_panel") }}
             </a>
             @endif
         </div>
@@ -121,46 +121,46 @@
         {{-- Desktop Sidebar --}}
         @auth
         <aside class="hidden lg:block lg:col-span-3 xl:col-span-2.5 lg:sticky lg:top-[90px] bg-white dark:bg-slate-900 rounded-2xl border border-gray-150 dark:border-slate-800/80 p-5 shadow-sm space-y-2.5 self-start">
-            <h2 class="text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-4 px-2">General Ledger Navigation</h2>
+            <h2 class="text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-4 px-2">{{ __("ui.nav_title") }}</h2>
 
             <a href="/dashboard" class="w-full flex items-center justify-between py-3 px-4 rounded-xl text-xs font-bold tracking-tight transition-all border-l-4 {{ request()->is('dashboard') ? 'bg-gradient-to-r from-emerald-50/90 to-transparent dark:from-emerald-950/45 text-emerald-800 dark:text-emerald-400 border-emerald-500' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50/50 dark:hover:bg-slate-800/40 hover:text-gray-900 dark:hover:text-gray-100 border-transparent' }}">
-                <span class="flex items-center gap-2.5">📊 Dashboard</span>
+                <span class="flex items-center gap-2.5">📊 {{ __("ui.dashboard") }}</span>
                 <span class="text-gray-300 dark:text-gray-600">→</span>
             </a>
 
             <a href="/transactions/create" class="w-full flex items-center justify-between py-3 px-4 rounded-xl text-xs font-bold tracking-tight transition-all border-l-4 {{ request()->is('transactions/create') ? 'bg-gradient-to-r from-emerald-50/90 to-transparent dark:from-emerald-950/45 text-emerald-800 dark:text-emerald-400 border-emerald-500' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50/50 dark:hover:bg-slate-800/40 hover:text-gray-900 dark:hover:text-gray-100 border-transparent' }}">
-                <span class="flex items-center gap-2.5">📝 Add Transaction</span>
+                <span class="flex items-center gap-2.5">📝 {{ __("ui.add_transaction") }}</span>
                 <span class="text-gray-300 dark:text-gray-600">→</span>
             </a>
 
             <a href="/projects" class="w-full flex items-center justify-between py-3 px-4 rounded-xl text-xs font-bold tracking-tight transition-all border-l-4 {{ request()->is('projects') ? 'bg-gradient-to-r from-emerald-50/90 to-transparent dark:from-emerald-950/45 text-emerald-800 dark:text-emerald-400 border-emerald-500' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50/50 dark:hover:bg-slate-800/40 hover:text-gray-900 dark:hover:text-gray-100 border-transparent' }}">
-                <span class="flex items-center gap-2.5">💹 Project Investments</span>
+                <span class="flex items-center gap-2.5">💹 {{ __("ui.project_investments") }}</span>
                 <span class="text-gray-300 dark:text-gray-600">→</span>
             </a>
 
             <a href="/transactions/analytics" class="w-full flex items-center justify-between py-3 px-4 rounded-xl text-xs font-bold tracking-tight transition-all border-l-4 {{ request()->is('transactions/analytics') ? 'bg-gradient-to-r from-emerald-50/90 to-transparent dark:from-emerald-950/45 text-emerald-800 dark:text-emerald-400 border-emerald-500' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50/50 dark:hover:bg-slate-800/40 hover:text-gray-900 dark:hover:text-gray-100 border-transparent' }}">
-                <span class="flex items-center gap-2.5">📈 Category Analytics</span>
+                <span class="flex items-center gap-2.5">📈 {{ __("ui.category_analytics") }}</span>
                 <span class="text-gray-300 dark:text-gray-600">→</span>
             </a>
 
             <a href="/transactions/history" class="w-full flex items-center justify-between py-3 px-4 rounded-xl text-xs font-bold tracking-tight transition-all border-l-4 {{ request()->is('transactions/history') ? 'bg-gradient-to-r from-emerald-50/90 to-transparent dark:from-emerald-950/45 text-emerald-800 dark:text-emerald-400 border-emerald-500' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50/50 dark:hover:bg-slate-800/40 hover:text-gray-900 dark:hover:text-gray-100 border-transparent' }}">
-                <span class="flex items-center gap-2.5">📋 Transaction History</span>
+                <span class="flex items-center gap-2.5">📋 {{ __("ui.transaction_history") }}</span>
                 <span class="text-gray-300 dark:text-gray-600">→</span>
             </a>
 
             <a href="/accounting" class="w-full flex items-center justify-between py-3 px-4 rounded-xl text-xs font-bold tracking-tight transition-all border-l-4 {{ request()->is('accounting') ? 'bg-gradient-to-r from-emerald-50/90 to-transparent dark:from-emerald-950/45 text-emerald-800 dark:text-emerald-400 border-emerald-500' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50/50 dark:hover:bg-slate-800/40 hover:text-gray-900 dark:hover:text-gray-100 border-transparent' }}">
-                <span class="flex items-center gap-2.5">🧾 Accounting Suite</span>
+                <span class="flex items-center gap-2.5">🧾 {{ __("ui.accounting_suite") }}</span>
                 <span class="text-gray-300 dark:text-gray-600">→</span>
             </a>
 
             <a href="/control-panel" class="w-full flex items-center justify-between py-3 px-4 rounded-xl text-xs font-bold tracking-tight transition-all border-l-4 {{ request()->is('control-panel') ? 'bg-gradient-to-r from-emerald-50/90 to-transparent dark:from-emerald-950/45 text-emerald-800 dark:text-emerald-400 border-emerald-500' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50/50 dark:hover:bg-slate-800/40 hover:text-gray-900 dark:hover:text-gray-100 border-transparent' }}">
-                <span class="flex items-center gap-2.5">⚙️ Control Panel</span>
+                <span class="flex items-center gap-2.5">⚙️ {{ __("ui.control_panel") }}</span>
                 <span class="text-gray-300 dark:text-gray-600">→</span>
             </a>
 
             @if(Auth::user()->isAdmin())
             <a href="/admin-panel" class="w-full flex items-center justify-between py-3 px-4 rounded-xl text-xs font-bold tracking-tight transition-all border-l-4 {{ request()->is('admin-panel') ? 'bg-gradient-to-r from-emerald-50/90 to-transparent dark:from-emerald-950/45 text-emerald-800 dark:text-emerald-400 border-emerald-500' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50/50 dark:hover:bg-slate-800/40 hover:text-gray-900 dark:hover:text-gray-100 border-transparent' }}">
-                <span class="flex items-center gap-2.5">🛡️ Admin Panel</span>
+                <span class="flex items-center gap-2.5">🛡️ {{ __("ui.admin_panel") }}</span>
                 <span class="text-gray-300 dark:text-gray-600">→</span>
             </a>
             @endif
@@ -168,8 +168,8 @@
             {{-- Dynamic Vault State --}}
             <div class="pt-4 mt-6 border-t border-gray-100 dark:border-slate-800/80 hidden lg:block text-xs">
                 <div class="bg-slate-50 dark:bg-slate-950 rounded-xl p-3 border border-gray-150/50 dark:border-slate-800/80">
-                    <p class="text-gray-400 dark:text-gray-500 font-bold uppercase text-[9px] mb-2 tracking-wide">Dynamic Vault State</p>
-                    <p class="text-gray-400 dark:text-gray-400 mt-1">Net Flow Balance:</p>
+                    <p class="text-gray-400 dark:text-gray-500 font-bold uppercase text-[9px] mb-2 tracking-wide">{{ __("ui.vault_state") }}</p>
+                    <p class="text-gray-400 dark:text-gray-400 mt-1">{{ __("ui.net_flow_balance") }}:</p>
                     <p class="font-black text-sm mt-0.5 text-emerald-700 dark:text-emerald-450">৳ {{ number_format($netBalance ?? 0) }}</p>
                 </div>
             </div>
@@ -212,7 +212,7 @@
                 <span class="text-2xl">🚪</span>
             </div>
             <h3 class="text-lg font-black text-gray-900 dark:text-white">{{ __("ui.logout") }}?</h3>
-            <p class="text-sm text-gray-500">Are you sure you want to sign out of your account?</p>
+            <p class="text-sm text-gray-500">{{ __("ui.confirm_logout") }}</p>
             <div class="flex gap-3 justify-center pt-2">
                 <button onclick="document.getElementById('logout-modal').classList.add('hidden')" class="px-5 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm font-bold text-gray-600 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all cursor-pointer">{{ __("ui.cancel") }}</button>
                 <button onclick="document.getElementById('logout-form').submit()" class="px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-bold transition-all cursor-pointer shadow-sm">{{ __("ui.logout") }}</button>
